@@ -1,0 +1,101 @@
+*
+  padding: 0
+  margin: 0
+  font-family: sans-serif
+
+h1
+  color: steelblue
+  margin: 10px auto
+  text-align: center
+
+.icon_container
+  width: 40px
+  height: 35px
+  margin: 20px auto
+  position: relative
+  cursor: pointer
+  z-index: 9999
+  & .line
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: 100%
+    height: 5px
+    border-radius: 20px
+    background-color: #201E50
+    transition: all .5s
+    &::before, &::after
+      content: ""
+      position: absolute
+      width: 100%
+      height: 5px
+      background-color: #201E50
+      border-radius: 20px
+      transition: all .5s
+    &::before
+      top: 10px
+    &::after
+      top: -10px
+  & .close
+    background-color: transparent
+    transition: all .5s
+    &::before, &::after
+      background-color: #fff
+      top: 0
+      transition: all .5s
+    &::before
+      transform: rotate(45deg)
+    &::after
+      transform: rotate(-45deg)
+
+nav
+  height: 100vh
+  width: 100%
+  background-color: #201E50
+  position: fixed
+  top: 0
+  overflow: hidden
+  transition: all 10s
+  &::after
+    content: ""
+    top: 0
+    position: absolute
+    width: 100%
+    height: 100%
+    opacity: 0
+    transition: all 10s
+
+.nav_inactive
+  display: none
+  opacity: 0
+  transition: all 10s
+
+.showtext
+  position: absolute
+  font-size: 30rem
+  font-weight: 700
+  text-align: center
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  color: #34325F
+
+.nav_containerbuttons
+  width: 200px
+  margin: 0 auto
+  position: relative
+  top: 50%
+  transform: translateY(-50%)
+  z-index: 2
+
+.nav_button
+  text-align: center
+  display: block
+  margin: 20px 0
+  text-decoration: none
+  font-size: 2rem
+  color: #fff
+  &:hover
+    text-decoration: line-through
+  &:visited
+    color: #E8E8E8

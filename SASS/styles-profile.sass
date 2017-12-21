@@ -1,0 +1,62 @@
+*
+  padding: 0
+  margin: 0
+  font-family: sans-serif
+
+h1
+  color: steelblue
+  margin: 10px auto
+  text-align: center
+
+.card
+  width: 400px
+  height: 200px
+  background-color: #fff
+  margin: 10% auto
+  border-radius: 5px
+  box-shadow: 0 0 20px #D1D1D1
+  position: relative
+  transition: 1s
+  &:hover
+    box-shadow: 0 20px 40px 5px #D1D1D1
+
+.imageProfile
+  position: relative
+  width: 150px
+  height: 150px
+  background: #D1D1D1
+  border-radius: 50%
+  margin: 25px
+  top: 25px
+  overflow: hidden
+  background-size: cover
+  background-position: center center
+  background-image: url("../images/principal/2.png")
+
+.filelayer
+  display: inline-block
+  width: 100%
+  height: 100%
+  border-radius: 50%
+  cursor: pointer
+  transition: .5s
+  &:hover
+    background-color: rgba( #000 , 0.6)
+  &:hover > .cameraicon
+    display: block
+
+
+.cameraicon
+  height: 100px
+  width: 100px
+  margin: 25px
+  display: none
+
+#fileinput
+  display: none
+
+.username
+  position: absolute
+  top: 20px
+  left: 200px
+  float: right

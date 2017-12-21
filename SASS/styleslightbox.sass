@@ -1,0 +1,74 @@
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  font-family: sans-serif
+
+h1
+  margin: 20px 0
+  text-align: center
+  color: #241E4E
+
+  letter-spacing: 5px
+
+.containerLightBox
+  margin: auto
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  align-items: center
+  justify-content: center
+  background-color: red
+
+.imageLightBox
+  width: 200px
+  height: 200px
+  margin: 30px
+
+
+.overlay
+  width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  left: 0
+  background-color: rgba(#000,.5)
+
+.bigImage
+  height: 75%
+  position: absolute
+  left: 50%
+  top: 45%
+  transform: translate(-50%,-50%)
+  outline: 0
+  appearance: none
+
+.navigator
+  width: 100%
+  height: 60px
+  position: fixed
+  bottom: 0
+  left: 0
+  background-color: #fff
+
+.navigator input
+  width: 60px
+  height: 60px
+  margin: 0 40px
+  border: none
+  border-radius: 100%
+  color: #fff
+
+.prev
+  float: left
+  background: red
+
+.posNav
+  position: absolute
+  top: 30%
+  left: 50%
+  transform: translateX(-50%)
+
+.next
+  float: right
+  background: green

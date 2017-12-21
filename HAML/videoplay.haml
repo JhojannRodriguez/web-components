@@ -1,0 +1,12 @@
+!!! 5
+%html
+  %head
+    %title VIDEO AUTOPLAY
+    %meta{ :content => "width = device-width initial-scale = 1", :name => "viewport"}
+    %link{ :href => "../CSS/styles-videoplay.css", :media => "screen", :rel => "stylesheet" }
+  %body
+    %h1 VIDEO AUTOPLAY
+    %svg{:viewbox => "0 0 33.2 44", :xmlns => "http://www.w3.org/2000/svg", :class => "downArrow"}
+      %path{:d => "M32 24.8a3.6 3.6 0 0 0-5 0l-6.8 6.7V3.7a3.7 3.7 0 0 0-7.3 0v27.8l-6.7-6.7A3.7 3.7 0 1 0 1.1 30L14 43a3.6 3.6 0 0 0 5.2 0L32 30a3.6 3.6 0 0 0 0-5.2z", "data-name" => "arrow down"}
+    %video{:src => "../VIDEO/videotest.mp4", :controls => true}
+    %script{:src => "../JS/script-videoplay.js"}

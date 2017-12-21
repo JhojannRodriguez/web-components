@@ -1,0 +1,12 @@
+!!! 5
+%html
+  %head
+    %title FULL WIDTH VIDEO
+    %meta{ :content => "width = device-width initial-scale = 1", :name => "viewport"}
+    %link{ :href => "../CSS/styles-widthvideo.css", :media => "screen", :rel => "stylesheet" }
+  %body
+    %h1 FULL WIDTH VIDEO
+    %section
+      %video{:class => "fluid",:loop => true,:autoplay => true}
+        %source{:src => "../VIDEO/videotest.mp4"}
+    %script{:src => "../JS/script-videowidth.js"}

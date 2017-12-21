@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif; }
+
+.indexTitle {
+  margin-top: 20px;
+  text-align: center;
+  color: #241E4E; }
+
+.indexListContainer {
+  display: inline-block;
+  margin-top: 40px;
+  margin-left: 40px; }
+
+.indexList {
+  margin: 20px 0;
+  list-style: none; }
+
+.indexList a {
+  text-decoration: none;
+  color: #960200; }
+
+.indexList a:hover {
+  text-decoration: underline;
+  color: #241E4E; }

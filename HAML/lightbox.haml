@@ -1,0 +1,12 @@
+!!! 5
+%html
+  %head
+    %title= "MY LIGHTBOX JS"
+    %meta{ :content => "width = device-width initial-scale = 1", :name => "viewport"}
+    %link{ :href => "../CSS/styleslightbox.css", :media => "screen", :rel => "stylesheet" }
+  %body
+    %h1 MY LIGHTBOX JS
+    %div.containerLightBox
+      - (1..11).each do |i|
+        %img.imageLightBox{:src => "../images/thumbs/#{i}.png" , :alt => "image number #{i}"}
+    %script{:src =>"../js/script-lightbox.js"}

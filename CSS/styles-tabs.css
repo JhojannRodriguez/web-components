@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif; }
+
+h1 {
+  color: steelblue;
+  margin: 10px auto;
+  text-align: center; }
+
+.tabContainer {
+  width: 80%;
+  height: 400px;
+  margin: 10% auto;
+  background-color: red; }
+
+.selectionsContainer {
+  width: 100%;
+  height: 40px;
+  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.option_tab {
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  background-color: #fff;
+  width: calc(100% / 5); }
+
+.option_tab.active {
+  background-color: #00f; }
+
+.changeSection {
+  width: 100%;
+  height: 360px;
+  background-color: blue;
+  position: relative; }
+
+.section_tab {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background-color: green; }
+
+.section_tab.active {
+  z-index: 1; }

@@ -1,0 +1,16 @@
+!!! 5
+%html
+  %head
+    %title= "TABS NAVIGATION"
+    %meta{ :content => "width = device-width initial-scale = 1", :name => "viewport"}
+    %link{ :href => "../css/styles-tabs.css", :media => "screen", :rel => "stylesheet" }
+  %body
+    %h1 TABS NAVIGATION
+    %div.tabContainer
+      %div.selectionsContainer
+        - (1..5).each do |i|
+          %div.option_tab #{i}
+      %div.changeSection
+        - (1..5).each do |i|
+          %div.section_tab #{i}
+    %script{:src => "../js/script-tabs.js"}

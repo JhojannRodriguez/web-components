@@ -1,0 +1,21 @@
+!!!5
+%html
+  %head
+    %title= "SLIDER"
+    %meta{ :content => "width = device-width initial-scale = 1", :name => "viewport"}
+    %link{ :href => "../CSS/styles-slider.css", :media => "screen", :rel => "stylesheet" }
+  %body
+    %h1 SLIDER
+    %div.slider
+      %div.slider_containerImages
+        %div{:class => "slide red"}
+          %img{:src => "../IMAGES/SLIDER/1.png"}
+        %div{:class => "slide blue"}
+          %img{:src => "../IMAGES/SLIDER/2.png"}
+        %div{:class => "slide yellow"}
+          %img{:src => "../IMAGES/SLIDER/3.png"}
+        %div{:class => "slide green"}
+          %img{:src => "../IMAGES/SLIDER/4.png", :class => "right"}
+
+      %ul.containerControls
+    %script{:src => "../JS/script-slider-demo.js"}
