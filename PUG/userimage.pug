@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title USER PROFILE
+    meta(content='width = device-width initial-scale = 1', name='viewport')
+    link(href='../CSS/styles-profile.css', media='screen', rel='stylesheet')
+  body
+    h1 USER PROFILE
+    .card
+      .imageProfile
+        label.filelayer(for='fileinput')
+          svg.cameraicon(version='1', viewbox='0 0 30 30', xmlns='http://www.w3.org/2000/svg')
+            path(d='M5.3 8.5h19.5v13H5.3z', fill='none', stroke-linejoin='round', stroke-miterlimit='10', stroke='#FFF')
+            circle(cx='15', cy='15', fill='none', r='4', stroke-linejoin='round', stroke-miterlimit='10', stroke='#FFF')
+            path(d='M19.5 5.5h4v3h-4z', fill='none', stroke-linejoin='round', stroke-miterlimit='10', stroke='#FFF')
+      input#fileinput(type='file')
+      h2.username PUT A IMAGES
+    script(src='../JS/script-profile.js')

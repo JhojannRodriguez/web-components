@@ -1,27 +1,26 @@
-'use strict';
+const gulp = require('gulp'),
+      sass = require('gulp-sass'),
+      pug = require('gulp-pug'),
+      browserSync = require('browser-sync').create();
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
+gulp.task('compile-sass', function(){
+  gulp.src('./SASS/*.sass')
+    .pipe(sass())
+    .pipe(gulp.dest('./CSS'))
+})
 
-gulp.task('sass', function () {
-  return gulp.src('sass/*.sass')
-    .pipe(sass.sync().on('error', sass.logError))
-    .pipe(gulp.dest('css'));
+gulp.task('compile-pug', function buildHTML() {
+  return gulp.src('./PUG/*.pug')
+  .pipe(pug())
+  .pipe(gulp.dest('./HTML'));
 });
 
-gulp.task('watch', function () {
-  gulp.watch('sass/*.sass', ['sass']);
-});
+gulp.task('reload', function() {
+  browserSync.init({ server: { baseDir: "./", directory: true, index: "./HTML/index.html" } })
+})
 
-var gulp = require('gulp');
-var webserver = require('gulp-webserver');
 
-gulp.task('webserver', function() {
-  gulp.src('html/index.hml')
-    .pipe(webserver({
-      livereload: true,
-      directoryListing: true,
-      open: true,
-      fallback: 'index.html'
-    }));
-});
+gulp.task('watch', function() {
+  gulp.watch('./SASS/*.sass', ['compile-sass']);
+  gulp.watch('./PUG/*.pug', ['compile-pug']);
+})

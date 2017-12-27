@@ -1,21 +1,37 @@
 {
   "name": "components",
   "version": "1.0.0",
-  "description": "",
+  "description": "My personal web components",
   "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.21.0",
+    "gulp-pug": "^3.3.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "babelify": "^8.0.0",
-    "gulp": "^3.9.1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JhojannRodriguez/web-components.git"
   },
-  "devDependencies": {
-    "babel-preset-env": "^1.6.1",
-    "gulp-babel": "^7.0.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-webserver": "^0.9.1"
-  }
+  "keywords": [
+    "Javascript",
+    "components",
+    "frontend",
+    "design",
+    "css",
+    "html",
+    "haml",
+    "sass"
+  ],
+  "author": "Jhojann Rodriguez Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JhojannRodriguez/web-components/issues"
+  },
+  "homepage": "https://github.com/JhojannRodriguez/web-components#readme"
 }

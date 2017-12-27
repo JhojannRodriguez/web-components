@@ -58,15 +58,10 @@ class Slider {
   }
 
   finger(){
-    window.addEventListener('touchstart', (e) => {
-      let a = document.createElement('h1');
-          a.style.position = 'fixed';
-          a.style.top = '20px';
-          a.style.left = '20px';
-          a.textContent = e;
-      console.log(e)
-    })
+    // let getMove = (e) => { console.log(window.event) };
+    // this.slider.addEventListener('mousedown', getMove())
+    // this.slider.addEventListener('mouseup', () => { this.slider.removeEventListener('mousedown', getMove()) })
   }
 }
 
-let sliderMovement = new Slider('.slider', false , ['opacity', 'show', 'rotate', 'r']);
+let sliderMovement = new Slider('.slider', 4000 , ['opacity', 'show', 'rotate', 'r']);

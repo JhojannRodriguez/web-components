@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title PARALLAX
+    meta(content='width = device-width initial-scale = 1', name='viewport')
+    link(href='../css/styles-parallax.css', media='screen', rel='stylesheet')
+  body
+    h1 Parallax
+    section.parallax
+      svg.change(data-name='Pink Red', data-scroll='30', viewbox='0 0 422 441', xmlns='http://www.w3.org/2000/svg')
+        defs
+          lineargradient#a(gradientunits='userSpaceOnUse', x1='385', x2='167', y1='48', y2='425')
+            stop(offset='0', stop-color='#f093fb')
+            stop(offset='1', stop-color='#f5576c')
+        path(d='M414 442c-69 70-253-1-323-70a179 179 0 0 1 0-253C161 49 332-9 402 61s82 311 12 381z', fill='url(#a)', transform='translate(-39 -29)')
+    section
+      svg(data-name='blue', viewbox='0 0 441 422', xmlns='http://www.w3.org/2000/svg')
+        defs
+          lineargradient#a_a(gradientunits='userSpaceOnUse', x1='29', x2='471', y1='250', y2='250')
+            stop(offset='0', stop-color='#667eea')
+            stop(offset='1', stop-color='#764ba2')
+        path(d='M58 414c-70-69 1-253 70-323a179 179 0 0 1 253 0c70 70 128 241 58 311s-311 82-381 12z', fill='url(#a_a)', transform='translate(-29 -39)')
+    section.parallax
+    section
+      svg.change(data-name='Violet Blue', viewbox='0 0 377 379', xmlns='http://www.w3.org/2000/svg')
+        defs
+          lineargradient#a(gradientunits='userSpaceOnUse', x1='118', x2='384', y1='107', y2='373')
+            stop(offset='0', stop-color='#fbc2eb')
+            stop(offset='1', stop-color='#a6c1ee')
+        path(d='M383 395c-70 70-199 53-269-17a179 179 0 0 1 0-253c70-69 205-92 275-22s64 222-6 292z', fill='url(#a)', transform='translate(-62 -61)')
+    section.parallax
+    section
+    section.parallax
+    section
+    script(src='../js/script-parallax.js')

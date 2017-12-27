@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title MY LIGHTBOX JS
+    meta(content='width = device-width initial-scale = 1', name='viewport')
+    link(href='../CSS/styleslightbox.css', media='screen', rel='stylesheet')
+  body
+    h1 MY LIGHTBOX JS
+    .containerLightBox
+      -for (i = 1; i < 12; i++)
+        img.imageLightBox(alt='image number ' + i, src='../images/thumbs/' + i + '.png')
+    script(src='../js/script-lightbox.js')
