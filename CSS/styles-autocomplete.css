@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: monospace; }
+
+html, body {
+  max-width: 100%;
+  width: 100%;
+  min-height: 100%; }
+
+body {
+  background-color: #33FFAE; }
+
+input[type="text"] {
+  background-color: transparent;
+  border: 6px solid #FF3384;
+  height: 50px;
+  width: 400px;
+  color: #000;
+  font-size: 1.5rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -200%); }
+  input[type="text"]:focus {
+    outline: none; }

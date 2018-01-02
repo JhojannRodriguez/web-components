@@ -2,49 +2,53 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif; }
+  font-family: monospace; }
 
 html, body {
   max-width: 100%;
-  height: 100%; }
+  width: 100%;
+  min-height: 100%; }
 
-.red {
-  background-color: red; }
+.fixed_overlay {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #33FFAE;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  perspective: 500px;
+  opacity: 0;
+  animation: app 2s forwards; }
 
-.blue {
-  background-color: #3066BE; }
+.fixedText {
+  position: fixed;
+  font-weight: 900;
+  text-align: center;
+  font-size: 50px;
+  color: #fff;
+  font-family: monospace; }
 
-.yellow {
-  background-color: #FFDD4A; }
+@keyframes app {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
-.green {
-  background-color: #00A9A5; }
+body {
+  min-height: 100vh; }
 
+/* OBLIGATORY STYLES */
 .slider {
   width: 100%;
-  height: 80%;
-  background-color: red;
+  height: 80vh;
   position: relative;
   overflow: hidden; }
 
 .slider_containerImages {
   height: 100%;
-  position: relative;
-  white-space: nowrap;
-  left: 0;
   transition: .2s; }
-
-.slider_containerImages * {
-  width: 100%;
-  height: 100%;
-  display: inline-block;
-  margin: 0 -3.5px; }
-
-.slider_containerImages *:nth-of-type(1) {
-  margin: 0; }
-
-.slider_containerImages *:nth-last-of-type(1) {
-  margin: 0; }
 
 .containerControls {
   position: absolute;
@@ -66,11 +70,37 @@ html, body {
 
 .slide {
   overflow: hidden;
+  position: absolute;
+  top: 0;
+  height: 100%; }
+
+/* DEMO STYLES */
+.demoimage {
+  width: 100%;
+  height: 30vh;
+  background-color: #33FFAE;
   position: relative; }
 
-.slide * {
-  width: auto;
-  height: auto; }
+.firstTitle {
+  color: #FF3384;
+  font-family: monospace;
+  font-weight: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.red {
+  background-color: #FF5154; }
+
+.blue {
+  background-color: #3066BE; }
+
+.yellow {
+  background-color: #FFDD4A; }
+
+.green {
+  background-color: #00A9A5; }
 
 .right {
   float: right; }
@@ -118,5 +148,12 @@ html, body {
     opacity: 1; } }
 
 @media screen and (max-width: 700px) {
-  body {
-    background-color: red; } }
+  .container_slide {
+    width: 100%;
+    margin: 10% auto; }
+    .container_slide img {
+      width: 300px; }
+    .container_slide h1 {
+      width: 50%;
+      top: 40%;
+      left: 20%; } }

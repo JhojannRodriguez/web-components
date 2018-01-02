@@ -1,20 +1,49 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: sans-serif; }
+  box-sizing: border-box;
+  font-family: monospace; }
 
-h1 {
-  color: steelblue;
-  margin: 10px auto;
-  text-align: center; }
+html, body {
+  max-width: 100%;
+  width: 100%;
+  min-height: 100%; }
+
+.fixed_overlay {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #33FFAE;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  perspective: 500px;
+  opacity: 0;
+  animation: app 2s forwards; }
+
+.fixedText {
+  position: fixed;
+  font-weight: 900;
+  text-align: center;
+  font-size: 50px;
+  color: #fff;
+  font-family: monospace; }
+
+@keyframes app {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 .icon_container {
   width: 40px;
   height: 35px;
-  margin: 20px auto;
+  margin: 15px 10%;
   position: relative;
   cursor: pointer;
-  z-index: 9999; }
+  z-index: 999;
+  float: right; }
   .icon_container .line {
     position: absolute;
     top: 50%;
@@ -22,14 +51,14 @@ h1 {
     width: 100%;
     height: 5px;
     border-radius: 20px;
-    background-color: #201E50;
+    background-color: #fff;
     transition: all .5s; }
     .icon_container .line::before, .icon_container .line::after {
       content: "";
       position: absolute;
       width: 100%;
       height: 5px;
-      background-color: #201E50;
+      background-color: #fff;
       border-radius: 20px;
       transition: all .5s; }
     .icon_container .line::before {
@@ -49,26 +78,37 @@ h1 {
       transform: rotate(-45deg); }
 
 nav {
-  height: 100vh;
+  height: 60px;
   width: 100%;
-  background-color: #201E50;
+  background-color: #FF3384;
   position: fixed;
   top: 0;
-  overflow: hidden;
-  transition: all 10s; }
-  nav::after {
-    content: "";
-    top: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: all 10s; }
+  z-index: 5; }
 
-.nav_inactive {
-  display: none;
-  opacity: 0;
-  transition: all 10s; }
+.demo_section {
+  width: 100%;
+  height: 100vh;
+  background-color: #33FFAE; }
+
+.menu {
+  width: 100%;
+  height: 100vh;
+  background-color: #33FFAE;
+  padding: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  z-index: 50; }
+
+.menu_containerbuttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.menu_button {
+  font-size: 2rem;
+  margin: 20px 0;
+  text-align: center; }
 
 .showtext {
   position: absolute;
@@ -79,23 +119,3 @@ nav {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #34325F; }
-
-.nav_containerbuttons {
-  width: 200px;
-  margin: 0 auto;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2; }
-
-.nav_button {
-  text-align: center;
-  display: block;
-  margin: 20px 0;
-  text-decoration: none;
-  font-size: 2rem;
-  color: #fff; }
-  .nav_button:hover {
-    text-decoration: line-through; }
-  .nav_button:visited {
-    color: #E8E8E8; }
