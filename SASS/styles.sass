@@ -1,4 +1,5 @@
-@import "reset"
+@import "reset.sass"
+@import "title.sass"
 
 $green : #33FFAE
 $violet: #FF3384
@@ -64,3 +65,8 @@ footer
   & a
     margin-left: 5px
     color: #fff
+
+@media screen and (max-width: 500px)
+  .indexTitle
+    width: 80%
+    margin: 40px auto

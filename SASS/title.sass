@@ -1,0 +1,30 @@
+$green : #33FFAE
+
+.fixed_overlay
+  overflow: hidden
+  width: 100%
+  height: 100%
+  position: fixed
+  background-color: $green
+  z-index: 9999
+  top: 0
+  left: 0
+  perspective: 500px
+  opacity: 0
+  animation: app 2s forwards
+
+.fixedText
+  position: fixed
+  font-weight: 900
+  text-align: center
+  font-size: 50px
+  color: #fff
+  font-family: monospace
+  // transition: .1s
+  // animation: app 2s 1
+
+@keyframes app
+  from
+    opacity: 0
+  to
+    opacity: 1
