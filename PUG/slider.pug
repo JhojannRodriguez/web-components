@@ -4,11 +4,16 @@ html
     title SLIDER
     meta(content='width = device-width initial-scale = 1', name='viewport')
     link(href='../CSS/styles-slider.css', media='screen', rel='stylesheet')
+    script(src='../JS/showtitle.js')
   body
+    //- .demoimage
+    //-   h1.firstTitle SLIDER
     .slider
       .slider_containerImages
         .slide.red
-          img(src='../IMAGES/SLIDER/1.png')
+          .container_slide
+            img(src='../IMAGES/SLIDER/1.png')
+            h1 I AM A SMARTPHONE
         .slide.blue
           img(src='../IMAGES/SLIDER/2.png')
         .slide.yellow
@@ -16,4 +21,4 @@ html
         .slide.green
           img.right(src='../IMAGES/SLIDER/4.png')
       ul.containerControls
-    script(src='../JS/script-slider-demo.js')
+    script(src='../JS/script-slider.js', async='true')
